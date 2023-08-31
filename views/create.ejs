@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Page | <%= title %> </title>
-</head>
+
+<%- include('./partials/head.ejs') %>
+
 <body>
-    <nav>
-        <a href="/">Home page</a>
-        <a href="/about">About page</a>
-        <a href="/blogs/create">Create page</a>
-    </nav>
+    <%- include('./partials/nav.ejs') %>
+
     <h1>Create page</h1>
     <p>This is the Create a blog page</p>
 
@@ -20,6 +15,8 @@
         <textarea id="body" placeholder="What the content ?" required ></textarea>
         <button>Submit</button>
     </form>
+
+    <%- include('./partials/footer.ejs) %>
 
 </body>
 </html>
