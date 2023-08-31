@@ -9,10 +9,10 @@ const server = http.createServer((req, res) => {
     // const num = _.random(1, 100);
     // console.log(num)
 
-    const greet = _.once(() => {
-        console.log('Hey')
-    })
-    greet()
+    // const greet = _.once(() => {
+    //     console.log('Hey')
+    // })
+    // greet()
 
     
     //set header content type
