@@ -7,18 +7,19 @@
 
     <%- include('./partials/nav.ejs') %>
 
-    <h1>All Blogs</h1>
-    <p>This is the Home page</p>
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+    
+        <% if(blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <h3 class="title" > <%= blog.title %> </h3>
+                <p class="snippet" ><%= blog.snippet %></p>    
+            <% }) %>
+        <% } else { %>
+            <p>There are no blogs</p>
+        <% } %>
+    </div>
 
-    <% if(blogs.length > 0) { %>
-        <% blogs.forEach(blog => { %>
-            <h3 class="title" > <%= blog.title %> </h3>
-            <p class="snippet" ><%= blog.snippet %></p>    
-        <% }) %>
-    <% } else { %>
-        <p>There are no blogs</p>
-    <% } %>
-
-    <%- include('./partials/footer.ejs) %>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

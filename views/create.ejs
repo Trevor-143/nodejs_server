@@ -6,17 +6,16 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <h1>Create page</h1>
-    <p>This is the Create a blog page</p>
+    <div class="create-blog content">
+        <form>
+            <input type="text" id="title" placeholder="Whats the title ?" required>
+            <input type="text" id="snippet" placeholder="Whats the snippet ?" required>
+            <textarea id="body" placeholder="What the content ?" required ></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
 
-    <form>
-        <input type="text" id="title" placeholder="Whats the title ?" required>
-        <input type="text" id="snippet" placeholder="Whats the snippet ?" required>
-        <textarea id="body" placeholder="What the content ?" required ></textarea>
-        <button>Submit</button>
-    </form>
-
-    <%- include('./partials/footer.ejs) %>
+    <%- include('./partials/footer.ejs') %>
 
 </body>
 </html>
