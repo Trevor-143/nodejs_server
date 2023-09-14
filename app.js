@@ -1,6 +1,14 @@
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 const morgan = require('morgan')
+
+
+const dbURI = `mongodb+srv://trevor_admin:trevor1234@nodedb.ab4w0ip.mongodb.net/nodeDB?retryWrites=true&w=majority`
+mongoose.connect(dbURI).then((result) => {
+    console.log('db connected')
+    
+})
 
 //register view engine
 app.set('view engine', 'ejs');
